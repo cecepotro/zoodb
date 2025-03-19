@@ -16,6 +16,11 @@ import javax.persistence.Id;
 @Entity
 public class Animal {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+    private String nombre;
+            
     /**
      * @return the id
      */
@@ -44,9 +49,6 @@ public class Animal {
         this.nombre = nombre;
     }
     
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-    private String nombre;
+   
     
 }

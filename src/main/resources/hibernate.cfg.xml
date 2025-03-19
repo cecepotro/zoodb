@@ -13,7 +13,7 @@
             com.mysql.cj.jdbc.Driver
         </property>
         <property name="hibernate.connection.url">
-            jdbc:mysql://localhost/zoo
+            jdbc:mysql://localhost/zoo?useSSL=false
         </property>
         <property name="hibernate.connection.username">
             root
@@ -21,6 +21,8 @@
         <property name="hibernate.connection.password">
             admin
         </property>
+        
+        <mapping class="mx.itson.zoo.entidades.Animal"/>
     </session-factory>
 </hibernate-configuration>
 
