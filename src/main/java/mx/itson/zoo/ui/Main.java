@@ -4,6 +4,7 @@
  */
 package mx.itson.zoo.ui;
 
+import mx.itson.zoo.entidades.Animal;
 import mx.itson.zoo.persistence.AnimalDAO;
 
 /**
@@ -13,6 +14,13 @@ import mx.itson.zoo.persistence.AnimalDAO;
 public class Main {
     
     public static void main(String[] args) {
-        AnimalDAO.obtenerTodos();
+        //AnimalDAO.obtenerTodos();
+        
+        Animal a = new Animal();
+        a.setNombre("Nickardo");
+        a.setEspecie("Capibara");
+        a.setColor("Café");
+        a.setAltura(0.5);
+        AnimalDAO.guardar(a);
     }
 }

@@ -31,4 +31,20 @@ public class AnimalDAO {
         }
         return animales;
     }
+    
+    public static boolean guardar(Animal a){
+        boolean resultado = false;
+        try {
+            Session session = HibernateUtil.getSessionFactory().openSession();
+            session.beginTransaction(); 
+            
+            session.save(a);
+            session.getTransaction().commit();
+            
+            resultado = a.getId() != 0;
+        } catch(Exception ex) {
+            System.err.println("Ocurrió un error: " + ex.getMessage());
+        }
+        return resultado;
+    }
 }
