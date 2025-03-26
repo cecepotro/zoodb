@@ -4,10 +4,13 @@
  */
 package mx.itson.zoo.entidades;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 
 /**
  *
@@ -21,8 +24,26 @@ public class Animal {
     private int id;
     private String nombre;
     private String especie;
-    private String color;
-    private double altura;
+    private String color; 
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "id_jaula")
+    private Jaula jaula;
+    
+    /**
+     * @return the jaula
+     */
+    public Jaula getJaula() {
+        return jaula;
+    }
+
+    /**
+     * @param jaula the jaula to set
+     */
+    public void setJaula(Jaula jaula) {
+        this.jaula = jaula;
+    }
+
+    
     
     /**
      * @return the especie
@@ -52,20 +73,7 @@ public class Animal {
         this.color = color;
     }
 
-    /**
-     * @return the altura
-     */
-    public double getAltura() {
-        return altura;
-    }
-
-    /**
-     * @param altura the altura to set
-     */
-    public void setAltura(double altura) {
-        this.altura = altura;
-    }
-
+ 
 
             
     /**

@@ -5,6 +5,7 @@
 package mx.itson.zoo.ui;
 
 import mx.itson.zoo.entidades.Animal;
+import mx.itson.zoo.entidades.Jaula;
 import mx.itson.zoo.persistence.AnimalDAO;
 
 /**
@@ -14,13 +15,19 @@ import mx.itson.zoo.persistence.AnimalDAO;
 public class Main {
     
     public static void main(String[] args) {
-        //AnimalDAO.obtenerTodos();
+        AnimalDAO.obtenerTodos();
         
-        Animal a = new Animal();
-        a.setNombre("Nickardo");
-        a.setEspecie("Capibara");
-        a.setColor("Café");
-        a.setAltura(0.5);
-        AnimalDAO.guardar(a);
+        /*Animal a = new Animal();
+        a.setNombre("Luna");
+        a.setEspecie("Gata salvaje");
+        a.setColor("Negra");
+        a.setAltura(0.3);
+        
+        Jaula j = new Jaula();
+        j.setNumero("Jaula de nieve 5");
+        j.setUbicación("Zona desértica");
+        
+        a.setJaula(j);
+        AnimalDAO.guardar(a);*/
     }
 }

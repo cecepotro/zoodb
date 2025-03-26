@@ -23,6 +23,7 @@
         </property>
         
         <mapping class="mx.itson.zoo.entidades.Animal"/>
+        <mapping class="mx.itson.zoo.entidades.Jaula"/>
     </session-factory>
 </hibernate-configuration>
 
