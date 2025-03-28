@@ -25,25 +25,39 @@ public class Animal {
     private String nombre;
     private String especie;
     private String color; 
+    private Double altura;
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "id_jaula")
     private Jaula jaula;
     
+
     /**
-     * @return the jaula
+     * @return the id
      */
-    public Jaula getJaula() {
-        return jaula;
+    public int getId() {
+        return id;
     }
 
     /**
-     * @param jaula the jaula to set
+     * @param id the id to set
      */
-    public void setJaula(Jaula jaula) {
-        this.jaula = jaula;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    
+    /**
+     * @return the nombre
+     */
+    public String getNombre() {
+        return nombre;
+    }
+
+    /**
+     * @param nombre the nombre to set
+     */
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
     
     /**
      * @return the especie
@@ -73,37 +87,32 @@ public class Animal {
         this.color = color;
     }
 
- 
-
-            
-    /**
-     * @return the id
+     /**
+     * @return the altura
      */
-    public int getId() {
-        return id;
+    public Double getAltura() {
+        return altura;
     }
 
     /**
-     * @param id the id to set
+     * @param altura the altura to set
      */
-    public void setId(int id) {
-        this.id = id;
+    public void setAltura(Double altura) {
+        this.altura = altura;
     }
 
     /**
-     * @return the nombre
+     * @return the jaula
      */
-    public String getNombre() {
-        return nombre;
+    public Jaula getJaula() {
+        return jaula;
     }
 
     /**
-     * @param nombre the nombre to set
+     * @param jaula the jaula to set
      */
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setJaula(Jaula jaula) {
+        this.jaula = jaula;
     }
-    
-   
-    
+
 }

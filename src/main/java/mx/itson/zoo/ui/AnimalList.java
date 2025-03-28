@@ -89,7 +89,7 @@ public class AnimalList extends javax.swing.JFrame {
                 a.getNombre(),
                 a.getEspecie(),
                 a.getColor(),
-                0
+                a.getAltura()
             });
         }
     }
